@@ -1,0 +1,53 @@
+*{
+    padding:0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
+}
+.about{
+    width: 100%;
+    padding: 78px 0px;
+    background-image: url(img/about4.jpg);
+}
+.about img{
+    height: auto;
+    width: 1190px;
+}
+.about text{
+    width: 550px;
+}
+.main{
+    width: 1200px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0);
+}
+.about-text h1{
+    color: purple;
+    font-size: 80px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+.about-text h5{
+    color: lightskyblue;
+    font-size: 25px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+.about-text p{
+    color: blanchedalmond;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 28px;
+    margin-bottom: 45px;
+    font-weight: bolder;
+}

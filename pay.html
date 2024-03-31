@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="./pay.css">
+        <title>Payment</title>
+        <script>
+            function cardSpace(){
+                for(i=0;i<3;i++)
+                {
+                    var cd=document.getElementById('cardno').value;
+                    if(cd.length==4||cd.length==9||cd.length==14){
+                    document.getElementById('cardno').value = cd+"-";
+                    document.getElementById('cardno').max=1;
+                    }
+                }
+                 
+            }
+
+            function addSlashes(){
+                var expdt=document.getElementById('validtill').value;
+                if(expdt.length==2){
+                    document.getElementById('validtill').value = expdt+"/";
+                    document.getElementById('validtill').max=1;
+                }
+            }
+            function pay()
+            {
+                
+                var cno=document.f1.cardno.value.trim();
+                var cname=document.f1.cn.value.trim();
+                var exp=document.f1.validtill.value.trim();
+                var cvv=document.f1.cvv.value.trim();
+                if(cno.length==0||cname.length==0||exp.length==0||cvv.length==0)
+                {
+                    alert("Fill required fields")
+                }
+                else
+                {
+                    alert("Payment Successful");
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+            <img src="img/pay.webp" style="width:35%; height:590px;border-radius:10%;">
+            <div class="container" style="width:30%;height:590px;border-radius:10%;">
+                <h6>Checkout</h6>
+                <span>X</span>
+                <h1>Payment Method</h1>
+                <form name="f1" action="">
+                    <br><label for="cardno">Card Number
+                        <input type="text" name="cardno" id="cardno" maxlength="19" onkeypress="cardSpace()"/> 
+                    </label>
+                    <br><br><br><label for="cn">Card Holder Name
+                        <input type="text" name="cn" id="cn" maxlength="19" onmouseleave="capital()"/> 
+                    </label>
+                    <br><br><br><div class="float">
+                        <br><br><label for="validtill">Valid through
+                            <input type="text" name="validtill" id="validtill" maxlength="7" onkeypress="addSlashes()"/>
+                        </label>
+                        <br><br><label for="cvv">CVV
+                            <input type="text" name="cvv" id="cvv" maxlength="3"/>
+                        </label>
+                    </div>
+                    <div class="but" style="padding-left:14%;">
+                        <button onclick="pay()">PAY</button>
+                    </div>
+                </form>
+            </div>
+    </body>
+</html>

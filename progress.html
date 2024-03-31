@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LOADING</title>
+        <script>
+            function start(){
+                width=width+1;
+                var ele=document.getElementById("progress");
+                ele.style.width=width+"%";
+            }
+        </script>
+        <style>
+            #progress{
+                width: 100%;
+                background-color: grey;
+            }
+            #bar{
+                width: 0%;
+                background-color: orange;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="bar"></div>
+        <div id="progress"></div>
+    </body>
+</html>
